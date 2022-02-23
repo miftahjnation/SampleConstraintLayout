@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/login"
         tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="109dp" />
+        tools:layout_editor_absoluteY="109dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -23,7 +24,8 @@
         android:inputType="textPersonName"
         android:text="Name"
         tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="355dp" />
+        tools:layout_editor_absoluteY="355dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -33,7 +35,8 @@
         android:inputType="textPersonName"
         android:text="Name"
         tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="428dp" />
+        tools:layout_editor_absoluteY="428dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
@@ -41,5 +44,6 @@
         android:layout_height="wrap_content"
         android:text="Button"
         tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="566dp" />
+        tools:layout_editor_absoluteY="566dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
