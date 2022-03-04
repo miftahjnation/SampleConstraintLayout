@@ -43,12 +43,21 @@ public class MainActivity extends AppCompatActivity {
                 //Menyimpan input user di edittext password kedalam variable password
                 password = edpassword.getText().toString();
 
-                //Membuat variable toast dan membuat toast dengan menambahkan variable nama dan password
-                Toast t = Toast.makeText(getApplicationContext(),
-                        "email anda: "+nama+" dan Password anda: "+password+"", Toast.LENGTH_LONG);
-
-                //menampilkan toast
-                t.show();
+//                //Membuat variable toast dan membuat toast dengan menambahkan variable nama dan password
+//                Toast t = Toast.makeText(getApplicationContext(),
+//                        "email anda: "+nama+" dan Password anda: "+password+"", Toast.LENGTH_LONG);
+//
+//                //menampilkan toast
+//                t.show();
+                if(nama.equals("admin@mail.com") && password.equals("123")){
+                    Toast.makeText(getApplicationContext(), "Login berhasil!!", Toast.LENGTH_LONG).show();
+                }else if(nama.equals("admin@mail.com") && !password.matches("123")){
+                    Toast.makeText(getApplicationContext(), "Password Salah", Toast.LENGTH_LONG).show();
+                }else if(!nama.matches("admin@mail.com") && password.equals("123")) {
+                    Toast.makeText(getApplicationContext(), "Email Salah", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Email dan Password salah", Toast.LENGTH_LONG).show();
+                }
 
             }
         });
