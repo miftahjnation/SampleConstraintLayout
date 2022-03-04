@@ -32,5 +32,25 @@ public class MainActivity extends AppCompatActivity {
 
         //Menghubungkan variable edpassword dengan component edittext password pada layout
         edpassword=findViewById(R.id.edPassword);
+
+        //membuat fungsi onclick pada button btnLogin
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                //Menyimpan imput user di edittext email kedalam variable nama
+                nama = edemail.getText().toString();
+
+                //Menyimpan input user di edittext password kedalam variable password
+                password = edpassword.getText().toString();
+
+                //Membuat variable toast dan membuat toast dengan menambahkan variable nama dan password
+                Toast t = Toast.makeText(getApplicationContext(),
+                        "email anda: "+nama+" dan Password anda: "+password+"", Toast.LENGTH_LONG);
+
+                //menampilkan toast
+                t.show();
+
+            }
+        });
     }
 }
