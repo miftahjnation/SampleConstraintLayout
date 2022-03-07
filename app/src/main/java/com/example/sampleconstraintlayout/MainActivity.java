@@ -2,6 +2,7 @@ package com.example.sampleconstraintlayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,7 +51,22 @@ public class MainActivity extends AppCompatActivity {
 //                //menampilkan toast
 //                t.show();
                 if(nama.equals("admin@mail.com") && password.equals("123")){
+                    Bundle b = new Bundle();
+                    //key parsing data dimasukkan kedalam bundle
+                    b.putString("a", nama.trim());
+                    b.putString("b", password.trim());
+
+                    //Membuat objek untuk pindah halaman
+                    Intent i = new Intent(getApplicationContext(), ActivityHasil.class);
+                    //Memasukkan bundle ke dalam target
+                    i.putExtras(b);
+                    //berpindah ke halaman lain
+                    startActivity(i);
                     Toast.makeText(getApplicationContext(), "Login berhasil!!", Toast.LENGTH_LONG).show();
+
+                    //menghapus isi dari edittext
+                    edemail.getText().clear();
+                    edpassword.getText().clear();
                 }else if(nama.equals("admin@mail.com") && !password.matches("123")){
                     Toast.makeText(getApplicationContext(), "Password Salah", Toast.LENGTH_LONG).show();
                 }else if(!nama.matches("admin@mail.com") && password.equals("123")) {
