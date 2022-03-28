@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     b.putString("b", password.trim());
 
                     //Membuat objek untuk pindah halaman
-                    Intent i = new Intent(getApplicationContext(), ActivityHasil.class);
+                    Intent i = new Intent(getApplicationContext(), Home_Activity.class);
                     //Memasukkan bundle ke dalam target
                     i.putExtras(b);
                     //berpindah ke halaman lain
