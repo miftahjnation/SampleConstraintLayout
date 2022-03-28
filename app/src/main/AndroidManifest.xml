@@ -15,6 +15,7 @@
         <activity
             android:name=".ActivityHasil"
             android:exported="true" />
+        <activity android:name=".Home_Activity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" >
